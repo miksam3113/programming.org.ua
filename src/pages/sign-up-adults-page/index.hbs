@@ -6,7 +6,122 @@
   </head>
   <body>
     {{> ../../header/header pageRoute='anketa/adults'}}
-    <main>sign up adults page</main>
+    <main>
+      <section class="breadcrumbs">
+        <a href="./" class="ng-binding">
+          <i class="fa fa-long-arrow-left" id="back-button"></i>
+          На попередню сторінку
+        </a>
+      </section>
+      <section class="content">
+        <h2>{{ htmlWebpackPlugin.options.content.translations.mf_h1 }}</h2>
+
+        <form class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-email">
+          <div class="info-input">
+            <label class="question">
+              {{ htmlWebpackPlugin.options.content.translations.mf_address
+              }}<span class="important">*</span>
+            </label>
+            <input
+              type="text"
+              name="city"
+              placeholder="{{ htmlWebpackPlugin.options.content.translations.mf_address_pl }}"
+            />
+          </div>
+          <div class="info-input">
+            <label class="question">
+              {{ htmlWebpackPlugin.options.content.translations.mf_phone
+              }}<span class="important">*</span>
+            </label>
+            <input type="tel" name="phone" placeholder="066 00 00 000" />
+          </div>
+          <div class="info-input">
+            <label class="question">
+              {{ htmlWebpackPlugin.options.content.translations.mf_mail
+              }}<span class="important">*</span>
+            </label>
+            <input type="email" name="email" placeholder="info@gmail.com" />
+            <a href="https://accounts.google.com/SignUp" target="_blank"
+              >{{{ htmlWebpackPlugin.options.content.translations.mf_mail2 }}}</a
+            >
+          </div>
+          <div class="info-input">
+            <label class="question">
+              {{ htmlWebpackPlugin.options.content.translations.mf_occupation
+              }}<span class="important">*</span>
+            </label>
+            <input
+              type="text"
+              name="occupation"
+              placeholder="{{ htmlWebpackPlugin.options.content.translations.mf_occupation_ph }}"
+            />
+            <label>
+              <input type="checkbox" name="work" />
+              {{ htmlWebpackPlugin.options.content.translations.mf_work_change }}
+            </label>
+          </div>
+          <div class="info-input">
+            <label class="question">
+              {{ htmlWebpackPlugin.options.content.translations.mf_experience
+              }}<span class="important">*</span>
+            </label>
+            <label>
+              <input type="radio" name="experience" value="true" />
+              {{ htmlWebpackPlugin.options.content.translations.mf_experience_false }}
+            </label>
+            <label>
+              <input type="radio" name="experience" value="false" />
+              {{ htmlWebpackPlugin.options.content.translations.mf_experience_true }}
+            </label>
+          </div>
+          <div class="info-input">
+            <label class="question">
+              {{ htmlWebpackPlugin.options.content.translations.mf_about
+              }}<span class="important">*</span>
+            </label>
+            <textarea
+              rows="5"
+              name="about"
+              placeholder="{{ htmlWebpackPlugin.options.content.translations.mf_about_ph }}"
+            ></textarea>
+          </div>
+          <div class="info-input">
+            <label class="question">
+              {{ htmlWebpackPlugin.options.content.translations.mf_find_out
+              }}<span class="important">*</span>
+            </label>
+            <textarea
+              rows="5"
+              name="find_out_about_shpp"
+              placeholder="{{ htmlWebpackPlugin.options.content.translations.mf_find_out_ph }}"
+            ></textarea>
+          </div>
+          <div class="info-input">
+            <label class="question">
+              {{ htmlWebpackPlugin.options.content.translations.mf_photo
+              }}<span class="important">*</span>
+            </label>
+            <div class="uploader">
+              <p>{{{ htmlWebpackPlugin.options.content.translations.lf_p7 }}}</p>
+            </div>
+          </div>
+          <div class="info-input">
+            <label class="agreement">
+              <input type="checkbox" name="agreement" />
+              {{{ htmlWebpackPlugin.options.content.translations.mf_agreement }}}<span
+                class="important"
+                >*</span
+              >
+            </label>
+          </div>
+          <div class="submit">
+            <button type="submit" class="button-primary">
+              <span>{{ htmlWebpackPlugin.options.content.translations.mf_submit }}</span>
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
     {{> ../../footer/footer}}
   </body>
 </html>
