@@ -16,7 +16,7 @@
       <section class="content">
         <h2>{{ htmlWebpackPlugin.options.content.translations.mf_h1 }}</h2>
 
-        <form class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-email">
+        <form>
           <div class="info-input">
             <label class="question">
               {{ htmlWebpackPlugin.options.content.translations.mf_address
@@ -66,11 +66,11 @@
               }}<span class="important">*</span>
             </label>
             <label>
-              <input type="radio" name="experience" value="true" />
+              <input type="radio" name="experience" id="false" />
               {{ htmlWebpackPlugin.options.content.translations.mf_experience_false }}
             </label>
             <label>
-              <input type="radio" name="experience" value="false" />
+              <input type="radio" name="experience" id="true" />
               {{ htmlWebpackPlugin.options.content.translations.mf_experience_true }}
             </label>
           </div>
@@ -92,11 +92,12 @@
             </label>
             <textarea
               rows="5"
-              name="find_out_about_shpp"
+              name="find_out"
               placeholder="{{ htmlWebpackPlugin.options.content.translations.mf_find_out_ph }}"
             ></textarea>
           </div>
           <div class="info-input">
+            <input name="photo" class="invisible" type="file" accept="image/*" />
             <label class="question">
               {{ htmlWebpackPlugin.options.content.translations.mf_photo
               }}<span class="important">*</span>
@@ -104,6 +105,15 @@
             <div class="uploader">
               <p>{{{ htmlWebpackPlugin.options.content.translations.lf_p7 }}}</p>
             </div>
+            <div class="uploader_fill invisible">
+              <div class="upload">
+                <button type="button" id="closeBtn">
+                  <i class="fa fa-times"></i>
+                </button>
+                <img height="100" alt="photo" id="photo" />
+              </div>
+            </div>
+            <div></div>
           </div>
           <div class="info-input">
             <label class="agreement">

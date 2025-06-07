@@ -134,12 +134,60 @@ main {
         padding: 1px 5px;
       }
 
+      .error {
+        border: 2px solid $color-red;
+      }
+
+      .uploader.error {
+        border: 2px dashed $color-red;
+      }
+
+      .agreement.error {
+        border: 2px solid $color-red;
+        border-bottom: 2px dashed $color-red;
+      }
+
       .uploader {
         border: 2px dashed $color-light-gray-2;
         cursor: pointer;
         margin: 10px 0;
         padding: 10px;
         text-align: center;
+      }
+
+      .uploading {
+        border: 2px dashed $color-main-green;
+      }
+
+      .uploader_fill {
+        margin: 10px 0;
+        padding: 10px;
+        border: none;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+
+        .upload {
+          position: relative;
+
+          button {
+            background: $color-transparent-red;
+            border: 0;
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            height: 25px;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            width: 25px;
+          }
+        }
+      }
+
+      .invisible {
+        display: none;
       }
 
       .agreement {
